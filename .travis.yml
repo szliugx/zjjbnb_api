@@ -21,4 +21,4 @@ addons:
   ssh_known_hosts: 120.77.223.127:22
 # after_success时，登录服务器，并从GitHub上拉取代码(代码目录下需要有.git信息)
 after_success:
-- ssh -p 22 'mkdir -p /home/www/php/zjjbnb_api'
+- ssh root@120.77.223.127 -p 22 'mkdir -p /home/www/php/zjjbnb_api'
