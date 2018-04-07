@@ -19,4 +19,4 @@ before_install:
 addons:
   ssh_known_hosts: 120.77.223.127:22
 after_success:
-- ssh travis@120.77.223.127 -p 22 'cd /home/www/php && git pull'
+- ssh -p 22 'cd /home/www/php && git pull'
