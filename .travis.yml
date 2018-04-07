@@ -15,9 +15,3 @@ notifications:
 before_install:
 - openssl aes-256-cbc -K $encrypted_04c5b7bbfe4f_key -iv $encrypted_04c5b7bbfe4f_iv
   -in id_rsa.enc -out ~\/.ssh/id_rsa -d
-- chmod 600 ~/.ssh/id_rsa
-- echo -e "Host 120.77.223.127\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-addons:
-  ssh_known_hosts: 120.77.223.127:22
-after_success:
-- ssh root@120.77.223.127 -p 22 'mkdir -p /home/www/php/zjjbnb_api'
