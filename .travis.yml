@@ -15,10 +15,10 @@ notifications:
 before_install:
 - openssl aes-256-cbc -K $encrypted_04c5b7bbfe4f_key -iv $encrypted_04c5b7bbfe4f_iv
   -in travis.enc -out travis -d
-#- chmod 600 travis
+- chmod 600 travis
 #- echo -e "Host 120.77.223.127:22\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 addons:
   ssh_known_hosts: 120.77.223.127:22
 # after_success时，登录服务器，并从GitHub上拉取代码(代码目录下需要有.git信息)
 after_success:
-- ssh travis@120.77.223.127 -p 22 'mkdir -p /home/www/php/zjjbnb_api'
+- ssh -p 22 'mkdir -p /home/www/php/zjjbnb_api'
